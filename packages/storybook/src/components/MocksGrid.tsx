@@ -1,16 +1,16 @@
-import "../styles/tokens-grid.css";
+import "../styles/mocks-grid.css";
 
-interface TokensGridProps {
-  tokens: Record<string, string>;
+interface MocksGridProps {
+  mocks: Record<string, string>;
   hasRemValue?: boolean;
 }
 
-export const TokensGrid = ({
-  tokens,
+export const MocksGrid = ({
+  mocks,
   hasRemValue = false,
-}: TokensGridProps) => {
+}: MocksGridProps) => {
   return (
-    <table className="tokens-grid">
+    <table className="mocks-grid">
       <thead>
         <tr>
           <th>Name</th>
@@ -20,7 +20,7 @@ export const TokensGrid = ({
       </thead>
 
       <tbody>
-        {Object.entries(tokens).map(([key, value]) => (
+        {Object.entries(mocks).map(([key, value]) => (
           <tr key={key}>
             <td>{key}</td>
             <td>{value}</td>
