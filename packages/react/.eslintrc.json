@@ -1,0 +1,3 @@
+{
+  "extends": "@micode-ui/eslint-config"
+}
