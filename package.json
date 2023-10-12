@@ -1,10 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "dev": "turbo dev --parallel",
+    "dev:storybook": "turbo dev --filter=storybook",
+    "build": "turbo build",
+    "build:docs": "turbo build --filter=docs",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "release": "yarn turbo build --filter=@micode-ui/react --filter=@micode-ui/mocks && changeset publish"
   },
   "devDependencies": {
     "eslint": "^8.48.0",
@@ -15,7 +18,6 @@
   "name": "micode-ui",
   "packageManager": "yarn@1.22.19",
   "workspaces": [
-    "apps/*",
     "packages/*"
   ]
 }
