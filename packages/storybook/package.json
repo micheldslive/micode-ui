@@ -1,0 +1,41 @@
+{
+  "name": "@micode-ui/storybook",
+  "private": true,
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@storybook/addon-a11y": "^7.0.0-beta.12",
+    "@storybook/addon-actions": "^7.0.0-beta.12",
+    "@storybook/addon-docs": "^7.0.0-beta.12",
+    "@storybook/addon-essentials": "^7.0.0-beta.12",
+    "@storybook/addon-interactions": "^7.0.0-beta.12",
+    "@storybook/addon-links": "^7.0.0-beta.12",
+    "@storybook/react": "^7.0.0-beta.12",
+    "@storybook/react-vite": "^7.0.0-beta.12",
+    "@storybook/client-api": "^7.0.0-beta.12",
+    "@storybook/testing-library": "^0.0.14-next.1",
+    "@vitejs/plugin-react": "^2.1.0",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.25.0",
+    "storybook": "^7.0.0-beta.12",
+    "vite": "^3.1.8"
+  },
+  "dependencies": {
+    "@micode-ui/eslint-config": "*",
+    "@micode-ui/react": "*",
+    "@micode-ui/mocks": "*",
+    "@micode-ui/ts-config": "*",
+    "phosphor-react": "^1.4.1",
+    "polished": "^4.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
+    "serve": "serve storybook-static",
+    "lint": "eslint src --ext .ts,.tsx --fix"
+  }
+}
