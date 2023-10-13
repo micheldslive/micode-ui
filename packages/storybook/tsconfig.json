@@ -1,4 +1,4 @@
 {
   "extends": "@micode-ui/ts-config/react.json",
-  "include": ["src", "../react/src/components"],
+  "include": ["src", "../react/src/components", "../react/src/shared"],
 }

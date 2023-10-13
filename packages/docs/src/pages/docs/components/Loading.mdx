@@ -1,0 +1,63 @@
+import { LoadingDemo } from '../../../demos/components/LoadingDemo.tsx';
+import { HeroContainer } from '../../../components/HeroContainer.tsx';
+import { PropsTable } from '../../../components/PropsTable';
+import { Surface, IconButton, Loading } from '@micode-ui/react';
+import { ArrowRight, Plus, Trash, ArrowClockwise, Phone, Microphone, Headset, Headphones } from 'phosphor-react';
+
+# Loading
+
+It is used to show a visual feedback of a process that could take some time.
+
+## Anatomy
+
+Mount all pieces together and create your Icon Button
+
+```tsx
+import { Loading } from '@micode-ui/react';
+
+<Loading />
+```
+
+You can use whichever icon library you want
+
+## Example
+
+<HeroContainer>
+  <LoadingDemo />
+</HeroContainer>
+
+```tsx
+<Surface>
+  <Loading color='#fff' />
+</Surface>
+```
+
+## Loading Sizes
+
+Use the `size` prop to change the size of the button. You can set the value to  `sm`, `md`, `lg` or `xl`.
+
+<HeroContainer>
+  <Surface css={{
+    display: 'flex',
+    alignItems: 'center',
+    gap: '$4',
+  }}>
+    <Loading color='#fff' size='sm' />
+    <Loading color='#fff' size='md' />
+    <Loading color='#fff' size='lg' />
+    <Loading color='#fff' size='xl' />
+  </Surface>
+</HeroContainer>
+
+```tsx
+<Surface css={{
+  display: 'flex',
+  alignItems: 'center',
+  gap: '$4',
+}}>
+  <Loading color='#fff' size='sm' />
+  <Loading color='#fff' size='md' />
+  <Loading color='#fff' size='lg' />
+  <Loading color='#fff' size='xl' />
+</Surface>
+```

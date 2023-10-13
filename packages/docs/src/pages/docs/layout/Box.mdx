@@ -1,0 +1,75 @@
+import { BoxDemo } from '../../../demos/layout/BoxDemo.tsx';
+import { HeroContainer } from '../../../components/HeroContainer.tsx';
+import { PropsTable } from '../../../components/PropsTable';
+
+# Box
+
+A standard box component to attach other elements
+
+## Anatomy
+
+Mount all pieces together and create your code
+
+```tsx
+import { Box } from '@micode-ui/react';
+
+<Box>
+  Your code here
+</Box>
+```
+
+## Example
+
+<BoxDemo />
+
+```tsx
+<Box
+  css={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '20rem',
+    height: '20rem',
+    color: '$black',
+    backgroundColor:'$gray700'
+  }}
+>
+  Your code here
+</Box>
+```
+
+## API Reference
+
+### Root
+
+Contains all parts of the Box.
+
+<PropsTable
+  data={[
+    {
+      name: 'css',
+      required: false,
+      type: 'object',
+      description:
+        'Change component stylizations through this default stitches attribute.',
+      default: '{}'
+    },
+  ]}
+/>
+
+### Fallback
+
+A feedback icon that sits on the left side of the input field.
+
+<PropsTable
+  data={[
+    {
+      name: 'css',
+      required: false,
+      type: 'object',
+      description:
+        'Change component stylizations through this default stitches attribute.',
+      default: '{}'
+    },
+  ]}
+/>

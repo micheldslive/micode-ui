@@ -1,0 +1,152 @@
+import { TextInputDemo } from '../../../demos/components/TextInputDemo.tsx';
+import { HeroContainer } from '../../../components/HeroContainer.tsx';
+import { PropsTable } from '../../../components/PropsTable';
+
+# Text Input
+
+A component to get user input inside a text field.
+
+## Anatomy
+
+Mount all pieces together and create your input
+
+```tsx
+import { TextInput } from '@micode-ui/react';
+
+<TextInput.Root>
+  <TextInput.LeftIcon>{/* Your Icon */}</TextInput.LeftIcon>
+  <TextInput.Input placeholder='Type some text...' />
+  <TextInput.RightIcon
+    activeIcon={/* Icon when text is visible */}
+    inactiveIcon={/* Icon when text not visible */}
+  />
+</TextInput.Root>;
+```
+
+## Example
+
+<HeroContainer>
+  <TextInputDemo  />
+</HeroContainer>
+
+```tsx
+<Box
+  css={{
+    display: 'flex',
+    flexDirection: 'column',
+    background: 'transparent',
+    gap: '$2'
+  }}
+>
+  <TextInput.Root>
+    <TextInput.LeftIcon>
+      <User weight='bold' />
+    </TextInput.LeftIcon>
+    <TextInput.Input placeholder='Type your username...' />
+  </TextInput.Root>
+  <TextInput.Root>
+    <TextInput.LeftIcon>
+      <Envelope weight='bold' />
+    </TextInput.LeftIcon>
+    <TextInput.Input placeholder='Type your password...' type='password' />
+    <TextInput.RightIcon
+      activeIcon={<Eye weight='bold' />}
+      inactiveIcon={<EyeSlash weight='bold' />}
+    />
+  </TextInput.Root>
+</Box>
+```
+
+## API Reference
+
+### Root
+
+Contains all parts of the TextInput.
+
+<PropsTable
+  data={[
+    {
+      name: 'children',
+      required: false,
+      type: 'ReactNode'
+    },
+    {
+      name: 'error',
+      required: false,
+      type: 'boolean',
+      default: 'false'
+    },
+    {
+      name: 'disabled',
+      required: false,
+      type: 'boolean',
+      default: 'false'
+    }
+  ]}
+/>
+
+### LeftIcon
+
+A feedback icon that sits on the left side of the input field.
+
+<PropsTable
+  data={[
+    {
+      name: 'children',
+      required: false,
+      type: 'ReactNode',
+      description: 'Icon shown when the text is visible'
+    }
+  ]}
+/>
+
+### Prefix
+
+A prefix text shown before the input text
+
+<PropsTable
+  data={[
+    {
+      name: 'children',
+      required: false,
+      type: 'string',
+      description: 'The text that will be shown before the input text'
+    }
+  ]}
+/>
+
+### Input
+
+The HTML input itself
+
+<PropsTable
+  data={[
+    {
+      name: 'children',
+      required: false,
+      type: 'ReactNode',
+      description: 'Icon shown when the text is visible'
+    }
+  ]}
+/>
+
+### RightIcon
+
+A feedback icon/text visibility toggler that sits on the right side of the input field.
+
+<PropsTable
+  data={[
+    {
+      name: 'activeIcon',
+      required: false,
+      type: 'ReactNode',
+      description: 'Icon shown when the text is visible'
+    },
+    {
+      name: 'inactiveIcon',
+      required: false,
+      type: 'ReactNode',
+      description: 'Icon shown when the text is not visible'
+    }
+  ]}
+/>
