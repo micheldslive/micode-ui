@@ -23,7 +23,7 @@ export const WithFallback: StoryFn<AvatarRootProps> = () => (
 export const WithFallbackIcon: StoryFn<AvatarRootProps> = () => (
   <Avatar>
     <Avatar.Fallback>
-      <User color="#fff" />
+      <User />
     </Avatar.Fallback>
   </Avatar>
 );

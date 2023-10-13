@@ -29,6 +29,7 @@ export const Fallback = styled(Avatar.Fallback, {
   fontFamily: "$default",
 
   svg: {
+    fill: "$colors-gray100",
     width: "$6",
     height: "$6",
   },
