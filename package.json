@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "turbo dev --parallel",
+    "dev": "turbo dev",
     "dev:storybook": "turbo dev --filter=storybook",
     "build": "turbo build",
     "build:docs": "turbo build --filter=docs",
@@ -12,6 +12,7 @@
   "devDependencies": {
     "eslint": "^8.48.0",
     "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.1.11",
     "tsconfig": "*",
     "turbo": "latest"
   },
