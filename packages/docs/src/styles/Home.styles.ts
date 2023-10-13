@@ -125,6 +125,14 @@ export const Button = styled('button', {
           transition: '0.2s',
           background: '$gray600'
         }
+      },
+      tertiary: {
+        background: 'linear-gradient(135deg, #FF4785, #DF4785)',
+
+        '&:hover': {
+          transition: '0.2s',
+          opacity: '0.8'
+        }
       }
     }
   },
