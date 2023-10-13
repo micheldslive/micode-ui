@@ -1,15 +1,13 @@
-import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
-import { Info } from 'phosphor-react';
+import { AccessibleIcon } from "@radix-ui/react-accessible-icon";
+import { Info } from "phosphor-react";
+import { styled } from "../../styles/stitches";
 
-export const AccessibleIconSpan = ({ label }: { label: string }) => {
+const AccessibleIconContent = styled(AccessibleIcon, { color: "$gray500" });
+
+export const AccessibleIconComponent = ({ label }: { label: string }) => {
   return (
-    <span
-      //@ts-ignore
-      as={AccessibleIcon}
-      label={label}
-      css={{ color: '$gray500' }}
-    >
+    <AccessibleIconContent label={label}>
       <Info size={16} />
-    </span>
+    </AccessibleIconContent>
   );
 };

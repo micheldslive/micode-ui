@@ -5,7 +5,7 @@ import { styled } from '../../styles/stitches';
 import { Code } from '../Code';
 import { DividerHorizontalIcon } from './DividerHorizontal';
 import { RegionTable } from './RegionTable';
-import { AccessibleIconSpan } from './AcessibleIcon';
+import { AccessibleIconComponent } from './AcessibleIcon';
 
 const Td = styled('td', {
   boxSizing: 'border-box',
@@ -133,7 +133,7 @@ export const PropsTable = ({
                           color: '$gray200'
                         }}
                       >
-                        <AccessibleIconSpan label='Prop description' />
+                        <AccessibleIconComponent label='Prop description' />
                       </IconButton>
                     </Popover.Trigger>
                     <Popover.Content
@@ -191,7 +191,7 @@ export const PropsTable = ({
                           verticalAlign: 'middle'
                         }}
                       >
-                        <AccessibleIconSpan label='See full type' />
+                        <AccessibleIconComponent label='See full type' />
                       </IconButton>
                     </Popover.Trigger>
                     <Popover.Content
