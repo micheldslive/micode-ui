@@ -1,8 +1,8 @@
-import Head from 'next/head';
-import { ArrowRight } from 'phosphor-react';
-import { useEffect, useState } from 'react';
-import { Github } from '../components/Github';
-import { Header } from '../components/Header';
+import Head from "next/head";
+import { ArrowRight } from "phosphor-react";
+import { useEffect, useState } from "react";
+import { Github } from "../components/Github";
+import { Header } from "../components/Header";
 import {
   Button,
   CTA,
@@ -12,8 +12,8 @@ import {
   Highlight,
   Stats,
   Title,
-  Wrapper
-} from '../styles/Home.styles';
+  Wrapper,
+} from "../styles/Home.styles";
 
 function App() {
   const [stars, setStars] = useState<number>(2);
@@ -21,9 +21,9 @@ function App() {
   const [isCopyClicked, setIsCopyClicked] = useState(false);
 
   useEffect(() => {
-    fetch('https://api.github.com/repos/micheldslive/micode-ui')
-      .then(res => res.json())
-      .then(data => {
+    fetch("https://api.github.com/repos/micheldslive/micode-ui")
+      .then((res) => res.json())
+      .then((data) => {
         setStars(data.stargazers_count);
         setForks(data.forks_count);
       });
@@ -38,21 +38,21 @@ function App() {
       <Header
         links={[
           {
-            href: '/docs',
-            label: 'Documentation'
+            href: "/docs",
+            label: "Documentation",
           },
           {
-            href: 'https://github.com/micheldslive/micode-ui',
-            label: 'GitHub'
-          }
+            href: "https://github.com/micheldslive/micode-ui",
+            label: "GitHub",
+          },
         ]}
       />
 
       <Wrapper>
         <Title>
-          <Highlight>React Powered</Highlight> Component UI,{' '}
-          <Highlight>accessible</Highlight> by default and built on top of{' '}
-          <Highlight as='a' href='https://www.radix-ui.com/' target='_blank'>
+          <Highlight>React Powered</Highlight> Component UI,{" "}
+          <Highlight>accessible</Highlight> by default and built on top of{" "}
+          <Highlight as="a" href="https://www.radix-ui.com/" target="_blank">
             Radix
           </Highlight>
           .
@@ -61,29 +61,23 @@ function App() {
         <Description>
           Micode UI is open source and made to be easy to use.
         </Description>
-
-        {/* <Download>
-          <Code>$ pnpm i @micode-ui/react</Code>
-          <Copy
-            isClicked={isCopyClicked}
-            onClick={() => {
-              setIsCopyClicked(true);
-              navigator.clipboard.writeText('pnpm i @micode-ui/react');
-            }}
-          >
-            Copy {isCopyClicked && <Check size={18} />}
-          </Copy>
-        </Download> */}
-
         <CTA>
-          <Button as='a' href='/docs/overview/getting-started'>
-            Get Started <ArrowRight size={20} weight='bold' />
+          <Button as="a" href="/docs/overview/getting-started">
+            Get Started <ArrowRight size={20} weight="bold" />
           </Button>
           <Button
-            as='a'
-            href='https://github.com/micheldslive/micode-ui'
-            target='_blank'
-            variant='secondary'
+            as="a"
+            target="_blank"
+            variant="tertiary"
+            href="https://ui-book.mi-code.dev"
+          >
+            Storybook
+          </Button>
+          <Button
+            as="a"
+            href="https://github.com/micheldslive/micode-ui"
+            target="_blank"
+            variant="secondary"
           >
             <Github />
             GitHub
