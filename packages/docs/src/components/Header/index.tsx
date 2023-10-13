@@ -43,8 +43,8 @@ export const Header = ({ links }: HeaderProps) => {
       {isOpen && (
         <>
           <Dropdown variant='mobile'>
-            {links.map(link => (
-              <Item key={link.label} href={link.href}>
+            {links.map((link, index) => (
+              <Item key={index} href={link.href}>
                 {link.label}
               </Item>
             ))}
