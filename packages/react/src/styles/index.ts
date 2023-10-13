@@ -1,5 +1,6 @@
 import {
   colors,
+  darkColors,
   fonts,
   fontSizes,
   fontWeights,
@@ -91,6 +92,10 @@ export const {
       height: value,
     }),
   },
+});
+
+export const darkTheme = createTheme("dark", {
+  colors: darkColors,
 });
 
 export type CSS = Stitches.CSS<typeof config>;
