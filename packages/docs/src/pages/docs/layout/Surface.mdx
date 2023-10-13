@@ -1,0 +1,75 @@
+import { SurfaceDemo } from '../../../demos/layout/SurfaceDemo.tsx';
+import { HeroContainer } from '../../../components/HeroContainer.tsx';
+import { PropsTable } from '../../../components/PropsTable';
+
+# Surface
+
+A rounded component for attaching other elements
+
+## Anatomy
+
+Mount all pieces together and create your code
+
+```tsx
+import { Surface } from '@micode-ui/react';
+
+<Surface>
+  Your code here
+</Surface>
+```
+
+## Example
+
+<SurfaceDemo />
+
+```tsx
+<Surface
+  css={{
+    display: 'flex',
+    alignItems: 'center',
+    gap: 20,
+    width: '100%',
+    height: '60px',
+    color: '$black',
+    backgroundColor:'$gray700'
+  }}
+>
+  Your code here
+</Surface>
+```
+
+## API Reference
+
+### Root
+
+Contains all parts of the Box.
+
+<PropsTable
+  data={[
+    {
+      name: 'css',
+      required: false,
+      type: 'object',
+      description:
+        'Change component stylizations through this default stitches attribute.',
+      default: '{}'
+    },
+  ]}
+/>
+
+### Fallback
+
+A feedback icon that sits on the left side of the input field.
+
+<PropsTable
+  data={[
+    {
+      name: 'css',
+      required: false,
+      type: 'object',
+      description:
+        'Change component stylizations through this default stitches attribute.',
+      default: '{}'
+    },
+  ]}
+/>

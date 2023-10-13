@@ -1,0 +1,54 @@
+import { TextAreaDemo } from '../../../demos/components/TextAreaDemo.tsx';
+import { HeroContainer } from '../../../components/HeroContainer.tsx';
+import { PropsTable } from '../../../components/PropsTable';
+import { Surface, IconButton, Loading, TextArea } from '@micode-ui/react';
+
+# Text Area
+
+It is used to collect multi-line user input.
+
+## Anatomy
+
+Mount all pieces together and create your Text Area.
+
+```tsx
+import { TextArea } from '@micode-ui/react';
+
+<TextArea />
+```
+
+## Example
+
+<HeroContainer>
+  <TextAreaDemo />
+</HeroContainer>
+
+```tsx
+<TextArea placeholder='Leave a short opinion' />
+```
+
+## Text Area States
+
+For now, there are just the basic `error` and `disabled` states.
+
+<HeroContainer>
+  <Surface css={{
+    display: 'flex',
+    alignItems: 'center',
+    gap: '$4',
+  }}>
+    <TextArea placeholder='Error' error />
+    <TextArea placeholder='Disabled' disabled />
+  </Surface>
+</HeroContainer>
+
+```tsx
+<Surface css={{
+  display: 'flex',
+  alignItems: 'center',
+  gap: '$4',
+}}>
+  <TextArea placeholder='Error' error />
+  <TextArea placeholder='Disabled' disabled />
+</Surface>
+```

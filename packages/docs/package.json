@@ -1,0 +1,34 @@
+{
+  "name": "@micode-ui/docs",
+  "version": "0.0.0",
+  "description": "Nextra docs template",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next start",
+    "start": "next start",
+    "format": "prettier --write --plugin-search-dir=. **/*.{cjs,mjs,ts,tsx}"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/micheldslive/micode-ui#readme",
+  "dependencies": {
+    "@mdx-js/react": "^2.1.5",
+    "@radix-ui/react-accessible-icon": "^1.0.1",
+    "@micode-ui/react": "*",
+    "@micode-ui/mocks": "*",
+    "@stitches/react": "^1.2.8",
+    "next": "^13.0.6",
+    "nextra": "2.0.1",
+    "nextra-theme-docs": "2.0.1",
+    "phosphor-react": "^1.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.56.1"
+  },
+  "devDependencies": {
+    "@micode-ui/eslint-config": "*",
+    "@types/node": "18.11.10",
+    "@types/react": "18.0.26",
+    "typescript": "^4.9.3",
+    "raw-loader": "^4.0.2"
+  }
+}

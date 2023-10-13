@@ -1,0 +1,79 @@
+import { MultiStepDemo } from '../../../demos/components/MultiStepDemo.tsx';
+import { HeroContainer } from '../../../components/HeroContainer.tsx';
+import { PropsTable } from '../../../components/PropsTable';
+import { Surface, MultiStep } from '@micode-ui/react';
+import { ArrowRight, Plus, Trash, ArrowClockwise, Phone, Microphone, Headset, Headphones } from 'phosphor-react';
+
+# Multi Step
+
+It is used to give a visual feedback of progress in a multi step activity.
+
+## Anatomy
+
+Mount all pieces together and create your Multi Step
+
+```tsx
+import { MultiStep } from '@micode-ui/react';
+
+<MultiStep />
+```
+
+You can use whichever icon library you want
+
+## Example
+
+<HeroContainer>
+  <MultiStepDemo />
+</HeroContainer>
+
+```tsx
+<Surface
+  css={{
+    width: '80%'
+  }}
+>
+  <MultiStep size={4} currentStep={2} label='Step 2 of 4' />
+</Surface>
+```
+
+## Without label
+
+<HeroContainer>
+  <Surface css={{
+    width: '80%'
+  }}>
+    <MultiStep size={4} currentStep={4} />
+  </Surface>
+</HeroContainer>
+
+```tsx
+<Surface css={{
+  width: '80%'
+}}>
+  <MultiStep size={4} currentStep={4} />
+</Surface>
+```
+
+## API Reference
+
+<PropsTable 
+  data={[
+    {
+      name: 'size',
+      required: true,
+      type: 'number'
+    },
+    {
+      name: 'currentStep',
+      required: true,
+      type: 'number',
+      default: 1,
+    },
+    {
+      name: 'label',
+      required: false,
+      type: 'string',
+      description: 'The label shown on top of the step indicator.'
+    }
+  ]}
+/>

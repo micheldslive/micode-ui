@@ -1,0 +1,150 @@
+import { IconButtonDemo } from '../../../demos/components/IconButtonDemo.tsx';
+import { HeroContainer } from '../../../components/HeroContainer.tsx';
+import { PropsTable } from '../../../components/PropsTable';
+import { Surface, IconButton } from '@micode-ui/react';
+import { ArrowRight, Plus, Trash, ArrowClockwise, Phone, Microphone, Headset, Headphones } from 'phosphor-react';
+
+# Icon Button
+
+Is used to render a icon within a button.
+
+## Anatomy
+
+Mount all pieces together and create your Icon Button
+
+```tsx
+import { IconButton } from '@micode-ui/react';
+import { Plus } from 'phosphor-react';
+
+<IconButton>
+  <Plus />
+</IconButton>
+```
+
+You can use whichever icon library you want
+
+## Example
+
+<HeroContainer>
+  <IconButtonDemo />
+</HeroContainer>
+
+```tsx
+<Surface
+  css={{
+    display: 'flex',
+    gap: '$4'
+  }}
+>
+  <IconButton>
+    <Plus />
+  </IconButton>
+  <IconButton>
+    <Trash />
+  </IconButton>
+  <IconButton>
+    <ArrowCounterClockwise />
+  </IconButton>
+</Surface>
+```
+
+## Variants
+
+Use the `variant` prop to change visual styles of the Button. You can set the value to `primary`, `secondary`, or `tertiart`.
+
+<HeroContainer>
+  <Surface 
+    css={{
+      display: 'flex',
+      gap: '$4',
+
+      '@media (max-width: 768px)': {
+        flexWrap: 'wrap',
+        width: '80%',
+        justifyContent: 'center',
+      }
+    }}
+  >
+    <IconButton variant='primary'><Phone/></IconButton>
+    <IconButton variant='secondary'><Trash/></IconButton>
+    <IconButton variant='tertiary'><Plus/></IconButton>
+  </Surface>
+</HeroContainer>
+
+```tsx
+<Surface 
+  css={{
+    display: 'flex',
+    gap: '$4'
+  }}
+>
+  <IconButton variant='primary'><Phone/></IconButton>
+  <IconButton variant='secondary'><Trash/></IconButton>
+  <IconButton variant='tertiary'><Plus/></IconButton>
+</Surface>
+```
+
+## Button Sizes
+
+Use the `size` prop to change the size of the button. You can set the value to `xs`, `sm`, `md`, or `lg`.
+
+<HeroContainer>
+  <Surface 
+    css={{
+      display: 'flex',
+      gap: '$4',
+      alignItems: 'center'
+    }}
+  >
+    <IconButton size='xs'><Microphone /></IconButton>
+    <IconButton size='sm'><Microphone /></IconButton>
+    <IconButton size='md'><Microphone /></IconButton>
+    <IconButton size='lg'><Microphone /></IconButton>
+  </Surface>
+</HeroContainer>
+
+```tsx
+<Surface 
+  css={{
+    display: 'flex',
+    gap: '$4',
+    alignItems: 'center'
+  }}
+>
+  <IconButton size='xs'><Microphone /></IconButton>
+  <IconButton size='sm'><Microphone /></IconButton>
+  <IconButton size='md'><Microphone /></IconButton>
+  <IconButton size='lg'><Microphone /></IconButton>
+</Surface>
+```
+
+## States
+
+Button have 3 "states", that you might find useful. They're `loading` and `disabled`.
+You can use them by simply passing the prop as seem in the example.
+
+<HeroContainer>
+  <Surface 
+    css={{
+      display: 'flex',
+      gap: '$4',
+      width: '80%'
+    }}
+  >
+    <IconButton loading><Microphone /></IconButton>
+    <IconButton disabled><Headphones /></IconButton>
+  </Surface>
+</HeroContainer>
+
+```tsx
+<Surface 
+  css={{
+    display: 'flex',
+    gap: '$4',
+    width: '80%'
+  }}
+>
+  <IconButton loading><Microphone /></IconButton>
+  <IconButton disabled><Headset /></IconButton>
+</Surface>
+```

@@ -1,0 +1,90 @@
+import { CheckboxDemo } from '../../../demos/components/CheckboxDemo.tsx';
+import { HeroContainer } from '../../../components/HeroContainer.tsx';
+import { PropsTable } from '../../../components/PropsTable';
+import { Code } from '../../../components/Code';
+
+# Checkbox
+
+A component used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.
+
+## Anatomy
+
+Mount all pieces together and create your Button
+
+```tsx
+import { Checkbox } from '@micode-ui/react';
+
+<Checkbox />;
+```
+
+## Example
+
+<HeroContainer>
+  <CheckboxDemo />
+</HeroContainer>
+
+```tsx
+<Surface
+  as='label'
+  css={{
+    display: 'flex',
+    gap: '$2'
+  }}
+>
+  <Checkbox />
+  <Text size='sm'>I accept the terms.</Text>
+</Surface>
+```
+
+## API Reference
+
+### Root
+
+Contains all parts of the Checkbox.
+
+<PropsTable
+  data={[
+    {
+      name: 'defaultChecked',
+      required: false,
+      type: 'boolean',
+      description:
+        'The checked state of the checkbox when it is initially rendered. Use when you do not need to control its checked state.'
+    },
+    {
+      name: 'checked',
+      required: false,
+      type: 'boolean',
+      default: 'false',
+      description: (
+        <span>The controlled checked state of the checkbox. Must be used in conjunction with <Code>onCheckedChange</Code>.</span>
+      ) 
+    },
+    {
+      name: 'onCheckedChange',
+      required: false,
+      typeSimple: 'function',
+      type: '(checked: boolean | "indeterminate") => void',
+      description:
+        'Event handler called when the checked state of the checkbox changes.'
+    },
+    {
+      name: 'disabled',
+      required: false,
+      type: 'boolean',
+      default: 'false',
+      description: (
+        <span>When <Code>true</Code>, prevents the user from interacting with the checkbox.</span>
+      )
+    },
+    {
+      name: 'required',
+      required: false,
+      type: 'boolean',
+      default: 'false',
+      description: (
+        <span>When <Code>true</Code>, indicates that the user must check the checkbox before the owning form can be submitted.</span>
+      )
+    }
+]}
+/>
