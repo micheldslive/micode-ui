@@ -10,7 +10,7 @@ export const TextArea = styled("textarea", {
 
   fontFamily: "$default",
   fontSize: "$sm",
-  color: "$white",
+  color: "$black",
   fontWeight: "$regular",
   resize: "vertical",
   minHeight: 80,

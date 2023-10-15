@@ -12,7 +12,7 @@ export default {
     },
   },
   decorators: [
-    (Story: () => unknown) => (
+    (Story) => (
       <Box
         css={{
           width: "100%",
@@ -30,20 +30,17 @@ export default {
 } as Meta<ToastProps>;
 
 export const Default = () => {
-  const [isToastOpen, setIsToastOpen] = useState(false);
-
-  const setToastIsOpen = (boolean: boolean) => {
-    setIsToastOpen(boolean);
-  };
+  const [open, onOpenChange] = useState(false);
 
   return (
     <>
-      <Button onClick={() => setToastIsOpen(true)}>Add to Cart</Button>
+      <Button onClick={() => onOpenChange(true)}>Add to Cart</Button>
       <Toast
-        isOpen={isToastOpen}
-        setIsOpen={setToastIsOpen}
+        open={open}
+        onOpenChange={onOpenChange}
         title="Added to cart"
         content="You can now continue shipping"
+        duration={5000}
       />
     </>
   );

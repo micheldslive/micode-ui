@@ -91,6 +91,7 @@ export const CTA = styled('div', {
   gap: '1rem',
   alignItems: 'center',
   justifyContent: 'center',
+  flexWrap: 'wrap',
   mt: '$20'
 });
 
