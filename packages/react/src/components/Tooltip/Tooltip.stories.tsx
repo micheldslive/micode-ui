@@ -7,7 +7,7 @@ export default {
   args: {
     content: "Hello, World!",
     children: (
-      <Box>
+      <Box css={{ width: "fit-content" }}>
         <Text>Hover me</Text>
       </Box>
     ),

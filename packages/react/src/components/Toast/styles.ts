@@ -66,7 +66,7 @@ export const Title = styled(ToastPrimitive.Title, {
   fontWeight: "$bold",
   fontSize: "$xl",
   lineHeight: "$base",
-  color: "$white",
+  color: "$black",
 });
 export const Description = styled(ToastPrimitive.Description, {
   fontFamily: "$default",
